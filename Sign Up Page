@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Restaurant Sign-Up Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sign Up Page CSS.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Sandwich Factory</h1>
+        </header>
+
+        <main>
+            <form action="Sign Up Confirmation.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+            
+                <input type="submit" value="Sign Up">
+
+                <p>By signing up, you agree to receive promotional emails from The Sandwich Factory.</p>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
