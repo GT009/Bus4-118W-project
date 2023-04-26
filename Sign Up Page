@@ -37,6 +37,8 @@
                 <input type="submit" value="Sign Up">
 
                 <p>By signing up, you agree to receive promotional emails from The Sandwich Factory.</p>
+
+                <p>Already have an account? <a href="The Sandwich Factory Login.html">Login here</a>.</p>
             </form>
         </main>
     </div>
@@ -65,3 +67,4 @@
     </script>
 </body>
 </html>
+
