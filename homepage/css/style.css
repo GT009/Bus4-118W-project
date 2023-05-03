@@ -76,6 +76,9 @@ html{
 
 .home{
     padding: 0;
+    border-bottom: solid;
+    border-width: .3rem;
+    border-color: var(--dark-red);
 }
 
 .home .slide{
