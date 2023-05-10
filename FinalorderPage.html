@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <link rel="stylesheet" href="Contact.css" />
+    <script>
+        function showImage() {
+            var sandwichType = document.getElementById("sandwich-type").value;
+            var image = document.getElementById("sandwich-image");
+            switch (sandwichType) {
+                case "The Classic":
+                    image.src = "https://www.billyparisi.com/wp-content/uploads/2018/05/roast-beef-sammy-1.jpg";
+                    break;
+                case "The Veggie":
+                    image.src = "https://hips.hearstapps.com/hmg-prod/images/delish-20210423-ultimate-veggie-sandwich-001-ab-1622826517.jpg?crop=0.6671220400728597xw:1xh;center,top&resize=1200:*";
+                    break;
+                case "The Club":
+                    image.src = "https://showmetheyummy.com/wp-content/uploads/2021/01/Club-Sandwich-Show-Me-the-Yummy-Google-Thumb-Retina-1-opt.jpg";
+                    break;
+                case "The Italian":
+                    image.src = "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/2/4/1/RX-FNM_030111-Weeknight-Dinners-025_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539864691.jpeg";
+                    break;
+                default:
+                    image.src = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header white-bg">
+
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#menu">menu</a>
+            <a href="#home">order</a>
+            <a href="#home">about</a>
+            <a href="#home">contact</a>
+        </nav>
+
+    </div>
+
+    <div class="container">
+        <h2></h2>
+        <form>
+            <label for="sandwich-type">Choose your sandwich type:</label>
+            <select id="sandwich-type" name="sandwich-type" onchange="showImage()">
+                <option value="The Classic">The Classic Sandwich $7.99</option>
+                <option value="The Veggie">Veggie Sandwich $6.99</option>
+                <option value="The Club">Club Sandwich $8.99</option>
+                <option value="The Italian">Italian Sandwich $8.99</option>
+            </select>
+
+            <label for="bread-type">Choose your bread type:</label>
+            <select id="bread-type" name="bread-type">
+                <option value="white">White Bread</option>
+                <option value="wheat">Wheat Bread</option>
+                <option value="sourdough">Sourdough Bread</option>
+            </select>
+
+            <label for="toppings">Choose your toppings:</label>
+            <ul id="toppings">
+                <li><input type="checkbox" name="lettuce" value="lettuce">Lettuce</li>
+                <li><input type="checkbox" name="tomato" value="tomato">Tomato</li>
+                <li><input type="checkbox" name="onion" value="onion">Onion</li>
+                <li><input type="checkbox" name="pickles" value="pickles">Pickles</li>
+                <li><input type="checkbox" name="cheese" value="cheese">Cheese</li>
+            </ul>
+
+            <label for="special-instructions">Special Instructions:</label>
+            <textarea id="special-instructions" name="special-instructions"></textarea>
+
+            <div>
+                <img id="sandwich-image" src="" alt="" style="max-width: 300px; max-height: 300px;">
+            </div>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+
+    
+    <div class="footer">
+
+    <div class="icons-container">
+
+      <div class="icons">
+          <i class="fas fa-business-time"></i>
+          <h3>Store Hours</h3>
+          <p>M-TH 10:00am to 9:00pm</p>
+          <p>F-SU  10:00am to 11:00pm</p>
+      </div>
+
+      <div class="icons">
+          <i class="fas fa-phone"></i>
+          <h3>Call Us</h3>
+          <p>408-123-4567</p>
+      </div>
+
+      <div class="icons">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>support@sandwichfactory.com</p>
+      </div>
+
+      <div class="icons">
+          <i class="fas fa-map-location"></i>
+          <h3>San Jose Location</h3>
+          <p>1 Washington Sq San Jose, CA 95192</p>
+      </div>
+
+  </div>
+
+  <div class="social">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+  </div>
+  
+</div>
+</html>
