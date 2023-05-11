@@ -18,7 +18,7 @@
     </nav>
     </div>
     <h1>ORDER HERE</h1>
-    <form>
+    <form method="POST" action="https://formspree.io/f/mlekvdea">
       <h2>Sandwiches</h2>
       <input type="radio" name="sandwich" value="ham" checked data-price="7.99">The Classic<br>
       <input type="radio" name="sandwich" value="turkey" data-price="6.99">The Veggie<br>
@@ -43,7 +43,7 @@
       <input type="button" value="Total" onclick="calculateTotal()">
       <span id="total"></span>
       <br>
-      <input type="button" value="Place Order" onclick="navigateToConfirmationPage()">
+      <button type="submit">Place Order</button>
 
     </form>
     
