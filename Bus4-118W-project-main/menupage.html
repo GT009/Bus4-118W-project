@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <title>The Sandwich Factory - Menu</title>
   <style>
+
+:root{
+    --light-red:#ffeded;
+    --red:#cd5252;
+    --dark-red:#863333;
+    --black:#222;
+    --white:#fff;
+    --dark-grey:#666;
+    --light-grey:#ccc;
+    --light-bg:#f5f5f5;
+    --dark-bg:#000000b3;
+    --border:.1rem solid #aaa;
+    --box-shadow:0 .5rem 1rem #0000001a;
+}
+    
 body {
     font-family: 'Lato', sans-serif;
     margin: 0; padding: 0;
@@ -25,8 +40,9 @@ html{
     scroll-padding-top: 6rem;
 }
 
-  /* Header styles */
-  .header{
+/* Header Section */
+
+.header{
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 6rem;
@@ -36,33 +52,28 @@ html{
     justify-content: space-between;
     box-shadow: var(--box-shadow);
     position: sticky;
-    background: white;
+    background: var(--white);
     top: 0; left: 0; right: 0;
     z-index: 1000;
 }
-  
-  .header .logo{
+
+.header .logo{
     font-size: 1rem;
     padding-right: .5rem;;
     height: auto;
 }
-  
-  .navbar {
-    display: flex;
-    align-items: right;
-  }
-  
-  .header .navbar a{
+
+.header .navbar a{
     font-size: 1.5rem;
     margin-left: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    color: red;
+    color: var(--red);
 }
 
 .header .navbar a:hover{
-    color: red;
+    color: var(--dark-red);
     text-decoration: underline;
     text-decoration-thickness: .3rem;
 }
@@ -151,16 +162,17 @@ body {
 <body>
   <div class="header white-bg">
 
-		<a href="#" class="logo"><img src="/Users/simarsahota/Desktop/Bus4-118W-project-main/homepage/images/logo.png" alt=""></a>
+    <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
 	
-		<nav class="navbar">
-			<a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/homepage/index.html">HOME</a>
-			<a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/menupage.html">MENU</a>
-			<a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/orderPage.html">ORDER</a>
-			<a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/About Us.html">ABOUT</a>
-			<a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/Location.html">CONTACT</a>
-			<a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/Sign Up Page.html">SIGN UP</a>
-		</nav>
+    <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="menupage.html">menu</a>
+      <a href="orderpage.html">order</a>
+      <a href="about us.html">about</a>
+      <a href="contact us.html">contact</a>
+      <a href="location.html">locations</a>
+      <a href="Sign Up Page.html">Sign Up</a>
+  </nav>
 	
 	</div>
   <header>

@@ -3,16 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap');
 
 :root{
-    --red:#cd5252;
-    --dark-red:#863333;
-    --black:#222;
-    --white:#fff;
-    --dark-grey:#666;
-    --light-grey:#ccc;
-    --light-bg:#f5f5f5;
-    --dark-bg:#000000b3;
-    --border:.1rem solid #aaa;
-    --box-shadow:0 .5rem 1rem #0000001a;
+  --light-red:#ffeded;
+  --red:#cd5252;
+  --dark-red:#863333;
+  --black:#222;
+  --white:#fff;
+  --dark-grey:#666;
+  --light-grey:#ccc;
+  --light-bg:#f5f5f5;
+  --dark-bg:#000000b3;
+  --border:.1rem solid #aaa;
+  --box-shadow:0 .5rem 1rem #0000001a;
 }
 
 *{
@@ -40,36 +41,39 @@ html{
 /* Header Section */
 
 .header{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: var(--box-shadow);
-    position: sticky;
-    background: var(--white);
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  background: var(--white);
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
 }
 
 .header .logo{
-    font-size: 1rem;
-    padding-right: .5rem;;
-    height: auto;
+  font-size: 1rem;
+  padding-right: .5rem;;
+  height: auto;
 }
 
 .header .navbar a{
-    font-size: 1.5rem;
-    margin-left: 2rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--red);
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--red);
 }
 
 .header .navbar a:hover{
-    color: var(--dark-red);
+  color: var(--dark-red);
+  text-decoration: underline;
+  text-decoration-thickness: .3rem;
 }
 
 .container{
