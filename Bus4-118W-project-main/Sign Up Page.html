@@ -1,70 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign-Up Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Sign Up Page CSS.css">
+    <meta charset="UTF-8" />
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" href="sign up page css.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>The Sandwich Factory</h1>
-        </header>
+    
+    <div class="header white-bg">
 
-        <main>
-            <form action="Sign Up Confirmation.html" method="post" onsubmit="return validateForm()">
-
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required pattern="[A-Za-z]+" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" maxlength="10" required>
-
-
-                <label for="birthday">Birthday:</label>
-                <input type="date" id="birthday" name="birthday" max="<?php echo date('Y-m-d'); ?>" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="repassword">Re-enter Password:</label>
-                <input type="password" id="repassword" name="repassword" required>
-
-                <input type="submit" value="Sign Up">
-
-                <p>By signing up, you agree to receive promotional emails from The Sandwich Factory.</p>
-
-                <p>Already have an account? <a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/Login.html">Login here</a>.</p>
-            </form>
-        </main>
+        <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+    
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="menupage.html">menu</a>
+            <a href="orderpage.html">order</a>
+            <a href="about us.html">about</a>
+            <a href="contact us.html">contact</a>
+            <a href="location.html">locations</a>
+            <a href="Sign Up Page.html">Sign Up</a>
+        </nav>
+    
     </div>
 
-    <script>
-        function validateForm() {
-            const password = document.getElementById('password').value;
-            const repassword = document.getElementById('repassword').value;
-            const birthday = document.getElementById('birthday').value;
+    <div class="login-page">
+        <form action="sign up conf page.html" class="form">
 
-            if (password !== repassword) {
-                alert('Passwords do not match. Please try again.');
-                return false;
-            }
+            <label for="">email</label>
+            <input type="email" id= "email" placeholder="Enter Email" required maxlength="30" />
 
-            const today = new Date();
-            const selectedDate = new Date(birthday);
+            <label for="">username</label>
+            <input type="text" id= "username" placeholder="Enter Username" required maxlength="30" />
 
-            if (selectedDate > today) {
-                alert('Please select a valid date of birth.');
-                return false;
-            }
+            <label for="">phone</label>
+            <input type="text" id= "tel" pattern="[0-9]{10}" placeholder="1234567890" maxlength="10" required>
 
-            return true;
-        }
-    </script>
+            <label for="">birthday</label>
+            <input type="date" id= "date" max="<?php echo date('Y-m-d'); ?>" required>
+
+            <label for="">password</label>
+            <input type="password" id= "password" placeholder="Enter Password" required />
+
+            <button onclick="send()"> Sign Up</button>
+        
+
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="login.js"></script>
+    
 </body>
 </html>
-
