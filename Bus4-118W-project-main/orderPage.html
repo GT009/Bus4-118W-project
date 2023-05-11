@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Sandwich Factory</title>
+    <link rel="stylesheet" type="text/css" href="orderPage.css">
+  </head>
+  <body>
+    <div class="header white-bg">
+      <a href="#" class="logo"><img src="/Users/simarsahota/Desktop/Bus4-118W-project-main/homepage/images/logo.png" alt=""></a>
+      <nav class="navbar">
+        <a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/homepage/index.html">HOME</a>
+        <a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/menupage.html">MENU</a>
+        <a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/orderPage.html">ORDER</a>
+        <a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/About Us.html">ABOUT</a>
+        <a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/Location.html">CONTACT</a>
+        <a href="/Users/simarsahota/Desktop/Bus4-118W-project-main/Sign Up Page.html">SIGN UP</a>
+      </nav>
+    </div>
+    <h1>ORDER HERE</h1>
+    <form>
+      <h2>Sandwiches</h2>
+      <input type="radio" name="sandwich" value="ham" checked data-price="7.99">The Classic<br>
+      <input type="radio" name="sandwich" value="turkey" data-price="6.99">The Veggie<br>
+      <input type="radio" name="sandwich" value="roast beef" data-price="8.99">The Club<br>
+      <input type="radio" name="sandwich" value="italian" data-price="8.99">The Italian<br>
+      
+      <h2>Bread</h2>
+      <input type="radio" name="bread" value="white" checked data-price="0.00">White<br>
+      <input type="radio" name="bread" value="wheat" data-price="0.50">Wheat (+0.50)<br>
+      <input type="radio" name="bread" value="sourdough" data-price="1.00">Sourdough (+1.00)<br>
+      
+      <h2>Cheese</h2>
+      <input type="radio" name="cheese" value="cheddar" data-price="0.50">Cheddar (+0.50)<br>
+      <input type="radio" name="cheese" value="swiss" data-price="0.50">Swiss (+0.50)<br>
+      <input type="radio" name="cheese" value="provolone" data-price="0.75">Provolone (+0.75)<br>
+      
+      <h2>Ingredients</h2>
+      <input type="checkbox" name="ingredient" value="lettuce" data-price="0.50">Lettuce (+0.50)<br>
+      <input type="checkbox" name="ingredient" value="tomato" data-price="0.50">Tomato (+0.50)<br>
+      <input type="checkbox" name="ingredient" value="onion" data-price="0.25">Onion (+0.25)<br>
+      <br>
+      <input type="button" value="Total" onclick="calculateTotal()">
+      <span id="total"></span>
+      <br>
+      <input type="button" value="Place Order" onclick="navigateToConfirmationPage()">
+
+    </form>
+    
+    <script>
+        function calculateTotal() {
+          let sandwiches = document.getElementsByName("sandwich");
+          let breads = document.getElementsByName("bread");
+          let cheeses = document.getElementsByName("cheese");
+          let ingredients = document.getElementsByName("ingredient");
+          
+          let sandwichPrice = 0;
+          let breadPrice = 0;
+          let cheesePrice = 0;
+          let ingredientPrice = 0;
+          
+          for (let i = 0; i < sandwiches.length; i++) {
+            if (sandwiches[i].checked) {
+              sandwichPrice = parseFloat(sandwiches[i].getAttribute("data-price"));
+              break;
+            }
+          }
+          
+          for (let i = 0; i < breads.length; i++) {
+            if (breads[i].checked) {
+              breadPrice = parseFloat(breads[i].getAttribute("data-price"));
+              break;
+            }
+          }
+          
+          for (let i = 0; i < cheeses.length; i++) {
+            if (cheeses[i].checked) {
+              cheesePrice = parseFloat(cheeses[i].getAttribute("data-price"));
+              break;
+            }
+          }
+          
+          for (let i = 0; i < ingredients.length; i++) {
+            if (ingredients[i].checked) {
+              ingredientPrice += parseFloat(ingredients[i].getAttribute("data-price"));
+            }
+          }
+          
+          let subtotal = sandwichPrice + breadPrice + cheesePrice + ingredientPrice;
+  let tax = subtotal * 0.09;
+  let total = subtotal + tax;
+
+  document.getElementById("total").innerHTML = total.toFixed(2);
+
+  function navigateToConfirmationPage() {
+    window.location.href = "/Users/simarsahota/Desktop/Bus4-118W-project-main/orderConfirmation.html";
+  }
+}
+      </script>

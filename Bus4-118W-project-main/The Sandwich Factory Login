@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sign Up Page CSS.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Sandwich Factory</h1>
+        </header>
+
+        <main>
+            <form action="index.html" method="post" onsubmit="return validateForm()">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Log In">
+
+                <p>Don't have an account? <a href="Sign Up Page.html">Sign up here</a>.</p>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        function validateForm() 
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Check if email is valid
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
